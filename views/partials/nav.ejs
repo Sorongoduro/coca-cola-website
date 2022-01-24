@@ -1,0 +1,146 @@
+<nav id="nav">
+    <div class="nav-container">
+        <div class="nav-container-left">
+            <a href="/"><img class="logo" src="/img/logo.png" alt="Logo de Coca-Cola"></a>
+            <ul class="main-menu">
+                <li><a class="item" href="/">Inicio</a></li>
+                <li><a class="item" href="/#news">Info</a></li>
+                <li class="dropdown-exec"><a class="dropdown-item" href="/#otras-marcas">Marcas</a>
+                    <ul class="dropdown">
+                        <li><a class="drop-item" href="https://www.spritelatinamerica.com/ar/es/home">Sprite</a>
+                        </li>
+                        <li><a class="drop-item" href="https://www.fantalatinamerica.com/ar/es/home">Fanta</a></li>
+                        <li><a class="drop-item" href="https://www.cocacoladeargentina.com.ar/marcas/crush">Crush</a>
+                        </li>
+                        <li><a class="drop-item" href="https://www.cocacoladeargentina.com.ar/marcas/cepita">Cepita</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="nav-container-right">
+            <ul class="main-menu">
+
+                <li>
+                    <!-- Button trigger modal -->
+                    <a class="item" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Ingresar
+                    </a>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Inicia sesion</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="">
+                                        <label>
+                                            Usuario:
+                                            <input type="text">
+                                        </label>
+                                        <label>
+                                            Contraseña:
+                                            <input type="password">
+                                        </label>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger">Olvide mi contraseña</button>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cerrar</button>
+
+                                    <button type="submit" class="btn btn-danger">Ingresar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li> <a class="item" data-bs-toggle="modal" data-bs-target="#exampleModal-1">
+                        Registrarse
+                    </a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal-1" tabindex="-1" aria-labelledby="exampleModalLabel-1"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel-1">Registrarse</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="register-form">
+                                        <label class="user-label">
+                                            Usuario:
+                                            <input class="user-input" type="text" name="user" required>
+                                        </label>
+                                        <label>
+                                            Mail:
+                                            <input class="email-input" type="mail" name="email" required>
+                                        </label>
+                                        <label>
+                                            Contraseña:
+                                            <input class="pass-input" type="password" name="password" required>
+                                        </label>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="submit" class="btn btn-danger">Registrarse</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="cart-item visible"><span class="circle"></span><a class="cart" href="/comprar"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            fill="black" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                        </svg></a></li>
+                <li class="hamburguer"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                            fill="currentColor" class="bi bi-list" viewBox="0 0 14 14">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg></a>
+                </li>
+                <ul class="hamburguer-slide">
+                    <li>
+                        <a type="item" data-toggle="modal"
+                            data-target=".bd-example-modal-sm">Ingresar</a>
+
+                        <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog"
+                            aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm" role="document">
+                                <div class="modal-content">
+                                    ...
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a type="item" data-toggle="modal"
+                            data-target=".bd-example-modal-sm">Registrarse</a>
+
+                        <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog"
+                            aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    ...
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+</nav>

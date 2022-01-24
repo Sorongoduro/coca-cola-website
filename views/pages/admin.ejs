@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <%- include('../partials/link') %> 
+    <title></title>
+</head>
+<body>
+
+    <div class="admin-container">
+        <h2 class="admin-title">Agrega un producto</h2>
+        <form class="admin-form">
+            <label>
+                Nombre:
+                <input type="text" name="name">
+            </label>
+            <label>
+                Tipo:
+                <input type="text" name="type">
+            </label>
+            <label>
+                Litros/Mililitros:
+                <input type="text" name="quantity">
+            </label>
+            <label>
+                Precio:
+                <input type="number" name="price">
+            </label>
+            <label>
+                Imagen:
+                <input type="text" name="image">
+            </label>
+            <label>
+                Descripcion de imagen:
+                <input type="text" name="description">
+            </label>
+            <input class="admin-add" type="submit" value="Agregar">
+        </form>
+    </div>
+
+
+    <script src="/js/addProduct.js"></script>
+</body>
+</html>

@@ -1,0 +1,1270 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+    font-family: 'Open Sans';
+}
+
+/* Nav */
+
+.logo {
+    max-width: 100px;
+}
+
+nav {
+    box-shadow: 0px 1px 21px 2px rgba(175,175,175,0.53);
+}
+
+.nav-container-left {
+    display: flex;
+}
+
+.nav-container {
+    padding: 15px 15px 15px 15px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+nav .main-menu {
+    position: relative;
+    align-items: center;
+    display: flex;
+    margin: 0;
+    list-style-type: none;
+}
+
+nav ul li .item, .dropdown-item {
+    position: relative;
+    margin-right: 20px;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.cart-item {
+    opacity: 1;
+    visibility: hidden;
+}
+
+.cart-item .visible {
+    opacity: 0;
+    visibility: visible;
+}
+
+.circle {
+    color: white;
+    position: absolute;
+    right: 5%;
+    top: -10%;
+    text-align: center;
+    font-size: 12px;
+    height: 18px;
+    width: 18px;
+    background-color: rgb(231, 17, 17);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+
+.cart {
+    margin-right: 16px;
+    color: black;
+}
+
+.cart:hover {
+    color: black;
+}
+
+nav ul li .item:hover, .dropdown-item:hover {
+    cursor: pointer;
+    color: red;
+}
+
+nav ul li .item::after {
+    position: absolute;
+    content: "";
+    background-color: red;
+    display: block;
+    height: 0.100rem;
+    width: 100%;
+    transform-origin: 0%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+
+nav ul li .item:hover::after {
+    transform: scaleX(1);
+}
+
+.modal-body label {
+    width: 50%;
+}
+
+
+.dropdown-exec {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-item {
+    padding: 0px;
+}
+
+.dropdown-item:hover {
+    background-color: white;
+}
+
+.dropdown {
+
+    list-style: none;
+    display: none;
+    height: fit-content;
+    position: absolute;
+    padding: 0px;
+    z-index: 1;
+    box-shadow: -1px 11px 27px -3px lightgray;
+}
+
+.dropdown a {
+
+    background-color: white;
+    color: black;
+    display: block;
+    padding: 10px 50px 10px 10px;
+    text-decoration: none;
+
+}
+
+.dropdown a:hover {
+    background-color: rgb(230, 17, 17);
+    color: white;
+}
+
+.dropdown-exec:hover .dropdown {
+    display: block;
+}
+
+.nav-container-right svg {
+    width: 35px;
+}
+
+.hamburguer svg {
+    fill: black;
+}
+
+.hamburguer {
+    position: relative;
+    margin: 0px 15px;
+    z-index: 998;
+}
+
+.hamburguer.active {
+    position: fixed;
+    right: 0;
+
+}
+
+.hamburguer-slide {
+    background-color: white;
+    top: 0;
+    left: 110%;
+    position: fixed;
+    z-index: 997;
+    display: block;
+    padding-top: 100px;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    box-shadow: 0px 1px 21px 2px rgba(175,175,175,0.53);
+    transition: .3s ease-in-out;
+}
+
+.hamburguer-slide.active {
+    left: 50%;
+}
+
+.hamburguer-slide {
+    list-style: none;
+
+}
+
+.hamburguer-slide li {
+    margin-top: 10px;
+}
+
+.hamburguer-slide a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Header */
+
+header {
+    background-image: url(../img/coke-line2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.header-container {
+    margin: 0 auto;
+    padding-top: 0px;
+    align-items: center;
+    display: grid;
+
+    grid-template-rows: 1fr;
+    grid-template-columns: 5% 95%;
+    text-align: center;
+
+}
+
+header h1 {
+
+    user-select: none;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+}
+
+
+
+.header-container-left {
+    display: grid;
+    grid-template-rows: 1fr;
+    flex-direction: column;
+    text-align: start;
+
+}
+
+
+.header-container-right  {
+    margin-right: 5%;
+    margin-bottom: 100px;
+
+    align-items: center;
+    padding: 20px 0px 100px 0px;
+    text-align: center;
+
+
+}
+
+.coke-light-img:hover {
+    max-width: 210px;
+    
+}
+
+.coke-classic-img:hover {
+    max-width: 240px;
+
+}
+
+.coke-zero-img:hover {
+    max-width: 210px;
+}
+
+.coke-zero-img {
+
+
+    margin: 0 auto;
+    max-width: 200px;
+    transition: max-width 0.5s ease;
+
+}
+
+.coke-light-img {
+    margin: 0 auto;
+    max-width: 200px;
+    transition: max-width 0.5s ease;
+
+}
+
+.coke-classic-img {
+
+    margin: 0 auto;
+    max-width: 230px;
+    transition: max-width 0.5s ease;
+
+}
+
+
+.header-container {
+    padding: 20px;
+}
+
+.header-container-left a{
+    width: fit-content;
+    margin-bottom: 15px;
+}
+
+.faq-icon{
+    cursor: pointer;
+    position: fixed;
+    right: 1%;
+    bottom: 3%;
+    visibility: visible;
+    opacity: 1;
+    z-index: 990;
+
+}
+
+.faq {
+
+    padding-bottom: 10px;
+    border-radius: 20px 20px 0px 0px;
+    position: fixed;
+    right: 0%;
+    bottom: 0%;
+    z-index: 999;
+    width: 300px;
+    box-shadow: 0 1px 14px 3px rgb(0 0 0 / 25%);
+    background-color: rgb(255, 255, 255);
+    transition: transform .3s ease;
+}
+
+
+
+.faq-bg-animation {
+    animation: faq-bg;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.faq-bg-animation-rev {
+
+    animation: faq-bg-reverse;
+    animation-direction: reverse;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes faq-bg {
+    from {
+        fill: red
+    }
+    
+    to {
+        fill: white
+    }
+}
+
+@keyframes faq-bg-reverse {
+    from {
+        fill: red
+    }
+    
+    to {
+        fill: white
+    }
+}
+
+.faq-exit {
+    text-align: center;
+    border-radius: 20px 20px 0px 0px;
+    background-color: red;
+    cursor: pointer;
+}
+
+.faq h3 {
+    text-align: center;
+    color: rgb(66, 66, 66);
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.faq-break {
+    transform: rotate(180deg);
+    margin: 10px auto;
+    width: 90%;
+    color: black;
+    border: 0.5px solid rgb(148, 148, 148);
+}
+
+
+
+.faq.oov {
+    transform: translate(0px, 450px);
+}
+
+.q-container ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: start;
+
+}
+
+.other-questions {
+    color: rgb(230, 17, 17);
+    padding: 5px 20px;
+}
+
+.other-questions:hover {
+    color: rgb(230, 17, 17);
+    text-decoration:underline;
+}
+
+.questions {
+    color: gray;
+    text-decoration: none;
+}
+
+.q-container li {
+    padding: 5px 20px;
+}
+
+.go-back-container svg {
+    fill: white;
+}
+
+.go-back-container {
+
+    align-items: center;
+    display: flex;
+}
+
+
+.go-back-container h4 {
+    margin: 0%;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.click-box {
+
+    color: black;
+    text-decoration: none;
+}
+
+
+.go-back {
+    color: white;
+    background-color: rgb(218, 39, 39);
+    z-index: 999;
+    padding: 10px 15px;
+    border-radius: 50px;
+    position: fixed;
+    left: 1%;
+    bottom: 3%;
+    transition: background-color .3 ease-in-out;
+}
+
+@keyframes down-opacity {
+    from {
+        transform: translateY(0px);
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    to {
+        transition: transform 2s ease;
+        transform: translateY(10px);
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes down-opacity-reverse {
+    from {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
+    to {
+        transition: transform 2s ease;
+        transform: translateY(10px);
+        opacity: 0;
+    }
+}
+
+
+
+
+.down-animation {
+    animation-name: down-opacity;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.down-animation-rev{
+    animation-name: down-opacity-reverse;
+    animation-duration: 0.2s;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+}
+
+
+.go-back:hover {
+    background-color: rgb(190, 37, 37);
+}
+
+
+/* Main */
+
+.curve {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.curve svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 72px;
+}
+
+.curve .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+.curve-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.curve-2 svg {
+    position: relative;
+    display: block;
+    width: calc(145% + 1.3px);
+    height: 89px;
+}
+
+.curve-2 .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+main {
+    margin: 0px 0px 100px 0px;
+    position: relative;
+    background-color: #eeee;
+
+}
+
+.main-container {
+
+    padding: 150px 0px;
+    margin: 0 auto;
+    max-width: 768px;
+}
+
+.carousel-inner {
+    border-radius: 20px;
+}
+
+
+
+.main-container h2 {
+    padding-bottom: 40px;
+    font-size: 35px;
+}
+
+.main-container img {
+    width: 500px;
+}
+
+.main-container h1, p {
+
+    padding: 0px 30px 0px 100px;
+    width: 40%;
+
+    color: white;
+}
+
+/* Sections */
+
+.first-sec {
+    padding-top: 200px;
+}
+
+.sec-container-coke {
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    display: flex;
+    margin: 0 auto;
+    max-width: 85%;
+    padding-bottom: 100px;
+}
+
+.sec-container-coke-classic h2 {
+    padding-bottom: 50px;
+    font-size: 35px;
+}
+
+.sec-container-right {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.sec-container-left {
+    text-align: center;
+}
+
+.sec-container-left img {
+    margin: 50px;
+    max-width: 400px;
+}
+
+.main-text {
+    text-align: center;
+}
+
+.sec-card {
+    background-color: white;
+    padding: 20px 15px 20px 15px;
+    cursor:default;
+    margin: 20px 10px;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    transition: box-shadow .3s ease;
+    box-shadow: lightgray 1px 1px 5px 2px;
+}
+
+.card-break {
+    transform: rotate(180deg);
+    margin: 10px auto;
+    width: 70%;
+    color: black;
+    border: 0.5px solid rgb(175, 175, 175);
+}
+
+.sec-card h3 {
+    font-size: 25px;
+    margin: 20px 0px 5px 0px;
+}
+
+.sec-card:hover {
+
+    box-shadow: 0px 1px 21px 8px rgba(175,175,175,0.53);
+}
+
+.sec-card img {
+    width: 170px;
+}
+
+.sec-card a {
+    background-color: rgb(230, 17, 17);
+    padding: 8px 50px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+
+}
+
+.sec-card a:hover {
+    color: rgb(230, 17, 17);
+    background-color: white;
+    border: 1px solid rgb(230, 17, 17);
+}
+
+
+.more-brands {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 992px;
+    padding-bottom: 50px;
+}
+
+.more-brands h2 {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.more-brands img {
+    max-width: 200px;
+}
+
+/* Footer */
+
+footer {
+    background-color: rgb(58, 58, 58);
+    /* background-color: rgb(230, 17, 17); */
+    position: relative;
+    padding-top: 100px;
+}
+
+.curve-4 {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.curve-4 svg {
+
+    position: relative;
+    display: block;
+    width: calc(142% + 1.3px);
+    height: 127px;
+}
+
+.curve-4 .shape-fill {
+
+    fill: #FFFFFF;
+}
+
+
+.footer-container {
+    padding: 20px 0px;
+    color: white;
+    max-width: 1080px;
+    margin: 0 auto;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+footer form label {
+    display: block;
+}
+
+
+.footer-container-left img {
+    max-width: 180px;
+}
+
+.footer-container-right {
+    text-align: end;
+}
+
+.footer-container-right svg {
+    fill: white;
+    margin-right: 10px;
+}
+
+.footer-container-below {
+    padding-bottom: 20px;
+    max-width: 1080px;
+    margin: 0 auto;
+    text-align: start;
+}
+.footer-container-below a{
+    color: white;
+    text-decoration: none;
+}
+
+footer button {
+    border: 0px;
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+    padding: 8px 30px;
+    transition: all .3s ease-in-out;
+}
+
+footer button:hover {
+    color: white;
+    background-color: black;
+}
+
+fieldset {
+    max-width: 100%;
+}
+
+.review-form textarea {
+    resize: none;
+}
+
+input, textarea {
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+textarea {
+    height: 100px;
+}
+
+.go-back-footer {
+    margin: 50px 10px 30px 0px;
+    align-items: center;
+
+}
+
+.go-back-footer a{
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 13px 30px;
+    background-color: white;
+    color: black;
+    transition: all .3s ease-in-out;
+}
+
+.go-back-footer a:hover {
+    color: white;
+    background-color: black;
+}
+
+hr {
+    color: white;
+    width: 15px;
+    transform: rotate(90deg);
+}
+
+.footer-container-below ul {
+    margin: 0 auto;
+    padding: 0px;
+    align-items: center;
+
+    list-style: none;
+    display: flex;
+}
+
+.footer-container-below li {
+    margin: 0px 5px;
+}
+
+.buy-interface {
+    border-radius: 10px;
+    margin: 0px 30px;
+    padding: 0px 20px;
+    box-shadow: 1px 1px 10px 2px lightgray;
+    border: 1px solid white;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+
+}
+
+.buy-interface:hover {
+    border: 1px solid red;
+}
+
+.buy-title {
+
+    padding-top: 100px;
+    text-align: center;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.buy-title i {
+    font-family: Lobster;
+    padding-right: 5px;
+    font-size: 45px;
+}
+
+.buy-break {
+    transform: rotate(90deg);
+    width: 100px;
+    border: 0.5px solid rgb(218, 218, 218);
+    color: black;
+}
+
+
+
+.buy-interface img {
+    width: 120px;
+}
+
+
+.product-titles {
+    text-align: center;
+}
+
+
+.buy-container-main {
+    max-width: fit-content;
+    font-size: 20px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+}
+
+.change-quantity {
+    border: 1px solid lightgray;
+    user-select: none;
+    cursor: default;
+    border-radius: 50px;
+    box-shadow: 0px 0px 0px 0px lightgray inset;
+    transition: all .3s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.change-quantity:hover {
+    box-shadow: 1px 1px 5px 2px lightgray inset;
+}
+
+.up-titles {
+
+    padding: 10px 30px;
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: 55% 25% 20%;
+    grid-template-rows: 1fr;
+
+}
+
+.changing-num {
+    text-align: center;
+    float: left;
+    margin: 0px 10px;
+    width: 20px;
+}
+
+.price-container {
+    text-align: center;
+    width: 70px;
+}
+
+.sub {
+
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+
+.sum {
+    cursor: pointer;
+    padding: 10px 15px;
+    color: rgb(230, 17, 17);
+}
+
+.buy-interface a:hover {
+    color: red;
+    background-color: white;
+}
+
+.container-buttons {
+
+    margin: 0 auto;
+    text-align: right;
+    padding-top: 50px;
+}
+
+.container-buttons a {
+    margin-left: 15px;
+    padding: 12px 20px;
+    background-color: rgb(230, 17, 17);
+    color: white;
+    border-radius: 100px;
+    border: 1px solid rgb(230, 17, 17);
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+.container-buttons a:hover {
+    background-color: white;
+    color: rgb(230, 17, 17);
+}
+
+.interface-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px 0px 200px 0px;
+}
+
+.admin-title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.admin-form {
+
+    margin: 0 auto;
+    max-width: fit-content;
+    display: grid;
+}
+
+.admin-form label {
+    margin-bottom: 20px;
+}
+
+.admin-form input {
+    padding: 5px 10px;
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 15px;
+}
+
+.admin-form input:focus {
+    outline: none;
+}
+
+.admin-container {
+    border-radius: 10px;
+    margin: 50px auto;
+    max-width: 35%;
+    padding: 20px 100px;
+    box-shadow: 1px 1px 10px 2px lightgray;
+}
+
+.admin-add {
+
+    color: white;
+    padding: 10px 0px;
+    background-color: rgb(230, 17, 17);
+    max-width: 150px;
+    transition: all .3s ease-in-out;
+}
+
+.admin-add:hover {
+    background-color: white;
+    color: rgb(230, 17, 17);
+    border: 1px solid rgb(230, 17, 17);
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+    .click-box {
+        display: none;
+    }
+}
+
+@media (max-width: 1350px) {
+    .sec-container-coke {
+        display: block;
+    }
+
+    .img-container {
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .hamburguer {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .sec-container-right {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+    }
+
+    .admin-container {
+        max-width: 60%;
+        padding: 10px 20px;
+    }
+
+
+    .carousel-inner {
+        border-radius: 0px;
+    }
+
+    .header-container {
+        grid-template-columns: 1fr;
+        
+    }
+    .header-container-left {
+        display: none;
+    }
+
+    .click-box {
+        display: none;
+    }
+
+    .sec-container-left img {
+        margin: 0px 0px 50px 0px;
+        max-width: 350px;
+    }
+
+
+
+    .main-menu {
+        padding: 0;
+    }
+
+    footer {
+        position: relative;
+    }
+
+    .footer-container {
+        text-align: center;
+        align-items: center;
+        display: block;
+    }
+
+    .footer-container-left {
+        margin-bottom: 20px;
+    }
+
+
+    fieldset {
+        margin: 0 auto;
+        max-width: fit-content;
+    }
+
+    .footer-container-right {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .footer-container-below {
+
+        width: fit-content;
+        margin: 0 auto;
+        text-align: center;
+
+    }
+
+    
+    .buy-title i {
+        font-size: 40px;
+    }
+
+}
+
+@media(max-width: 680px) {
+    .item, .dropdown-item {
+
+        display: none;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .buy-title i {
+        font-size: 35px;
+    }
+
+    .faq {
+        width: 100%;
+    }
+    .review-form {
+        padding: 0px 20px;
+    }
+    .nav-container {
+        padding: 15px 0px 15px 15px
+    }
+
+    .footer-container-below ul {
+        display: block;
+    }
+    
+    .circle {
+        right: 65%;
+        top: 5%;
+    }
+
+    hr {
+        transform: rotate(180deg);
+        width: 100%;
+    }
+
+
+
+
+    .sec-container-right {
+        display: inline-block;
+    }
+
+    .sec-container-left img {
+        max-width: 250px;
+    }
+
+    .header-container-right {
+        margin: 0;
+    }
+
+
+    .coke-classic-img {
+        display: block;
+        max-width: 215px;
+        margin-bottom: 20px;
+
+    }
+
+    .coke-light-img {
+        max-width: 190px;
+
+    }
+
+    .coke-zero-img {
+        max-width: 190px;
+        margin-bottom: 20px;
+    }
+
+    .buy-container-main {
+        margin-top: 30px;
+        text-align: center;
+        display: block;
+    }
+
+
+    .buy-break {
+        transform: rotate(180deg);
+        text-align: center;
+        margin: 0 auto;
+    }
+
+
+
+    .price-container {
+        padding: 20px 0px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+
+    .product-titles {
+        margin: 20px 0px;
+    }
+
+    .up-titles {
+        display: none;
+    }
+
+    .change-quantity {
+        float: none;
+        max-width: 60%;
+        margin: 30px auto;
+        justify-content: center;
+    }
+
+    .container-buttons {
+        max-width: fit-content;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 30px;
+        margin: 0 auto;
+        text-align: center;
+
+
+    }
+
+    .container-buttons a {
+        width: 100%;
+        margin: 0px;
+        margin-bottom: 15px;
+        text-align: center;
+        display: block;
+    }
+}

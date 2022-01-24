@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/metadata') %>
+        <%- include('../partials/link') %>
+            <link rel="stylesheet" href="/css/style.css">
+            <title><%= title %> </title>
+</head>
+
+<body>
+
+    <%- include('../partials/nav') %>
+    <%- include('../partials/faq') %>
+            <h1 class="buy-title">Detalle de <i>compra</i>:</h1>
+            <div class="interface-container">
+                <div class="buy-interface">
+                    <div class="up-titles">
+                        <span>Producto:</span>
+                        <span>Precio:</span>
+                        <span>Cantidad:</span>
+                    </div>
+
+                    <div class="buy-container-main">
+
+
+
+                        <img src="../img/<%= productos.image %> " alt="<%= productos.description %> ">
+                        <div class="product-titles">
+                            <%= `${productos.name} ${productos.quantity} ${productos.type}` %>
+                        </div>
+                        <hr class="buy-break">
+
+                        <div class="price-container">
+                            <span>$</span>
+                            <span class="price">
+                                <%= productos.price %>
+                            </span>
+
+                        </div>
+
+                        <hr class="buy-break">
+                        <div class="change-quantity">
+                            <span class="sub">-</span>
+                            <span class="changing-num">1</span>
+                            <span class="sum">+</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container-buttons">
+                    <a href="/">Seguir comprando</a>
+                    <a class="buy-button" href="">Comprar</a>
+                </div>
+            </div>
+
+            <%- include('../partials/footer') %>
+            <%- include('../partials/scripts') %>
+            <script src="/js/buy.js"></script>
+  
+
+</body>
+
+</html>
