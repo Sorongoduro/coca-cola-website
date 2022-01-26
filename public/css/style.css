@@ -421,6 +421,11 @@ header h1 {
     text-decoration: none;
 }
 
+.questions:hover {
+    color: gray;
+    text-decoration: none;
+}
+
 .q-container li {
     padding: 5px 20px;
 }
