@@ -632,7 +632,7 @@ main {
 }
 
 .sec-container-left img {
-    margin: 50px;
+    margin: 50px 100px 50px 10px;
     max-width: 400px;
 }
 
